@@ -34,7 +34,7 @@ export default function Home() {
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
           animationSpeed={3}
           showBorder={false}
-          className={`text-[8rem] m-0`}
+          className={`text-[8rem] m-0 select-none`}
         >
           5.0
         </GradientText>
