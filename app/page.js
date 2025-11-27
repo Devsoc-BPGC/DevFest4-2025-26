@@ -8,6 +8,7 @@ import GradientText from "@/components/GradientText";
 import CursorAura from "@/components/CursorAura";
 import Divider from "@/components/Divider";
 import ComingSoonCard from "@/components/ComingSoonCard";
+import BlurText from "@/components/BlurText";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -97,9 +98,13 @@ export default function Home() {
           2026
         </GradientText>
           </div>
-        <div className="text-white text-2xl font-bold">
-          MORE DETAILS COMING SOON...
-        </div>
+        <BlurText
+          text="MORE DETAILS COMING SOON..."
+          delay={150}
+          animateBy="words"
+          direction="top"
+          className="text-white text-2xl font-bold"
+            />
       </div>
 
 
@@ -137,11 +142,15 @@ export default function Home() {
       {/* Cursor/touch aura */}
 
       {/* About text in container */}
-      <div className="max-w-4xl mx-auto z-10 px-4">
+      <div className="max-w-4xl mx-auto z-10 px-3 text-center">
         <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
-          <p className="text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed text-center">
-            DevFest is the flagship technical event of Developers' Society featuring a diverse array of events — hackathon, gamejam, workshop, codegolf and guest speaker. This unites over 3000 students from all around the country, converging both in-person at the BITS Pilani - Goa campus and through nationwide virtual participation. Come, be a part of this unique blend of learning and celebration!
-          </p>
+            <BlurText
+          text="DevFest is the flagship technical event of Developers' Society featuring a diverse array of events — hackathon, gamejam, workshop, codegolf and guest speaker. This unites over 3000 students from all around the country, converging both in-person at the BITS Pilani - Goa campus and through nationwide virtual participation. Come, be a part of this unique blend of learning and celebration!"
+          delay={20}
+          animateBy="words"
+          direction="top"
+          className="text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed"
+            />
         </div>
       </div>
     </section>
