@@ -10,6 +10,7 @@ import Divider from "@/components/Divider";
 import ComingSoonCard from "@/components/ComingSoonCard";
 import BlurText from "@/components/BlurText";
 import FAQs from "@/components/FAQs";
+import Sponsors from "@/components/Sponors";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -117,7 +118,7 @@ export default function Home() {
     </section>
     <Divider />
     <section id="sponsors">
-      <ComingSoonCard />
+      <Sponsors />
     </section>
     <Divider />
     {/* About section */}
