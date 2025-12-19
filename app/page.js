@@ -9,6 +9,7 @@ import CursorAura from "@/components/CursorAura";
 import Divider from "@/components/Divider";
 import ComingSoonCard from "@/components/ComingSoonCard";
 import BlurText from "@/components/BlurText";
+import FAQs from "@/components/FAQs";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -18,6 +19,8 @@ const orbitron = Orbitron({
 export default function Home() {
   return (
     <main className={`${orbitron.className}`}>
+    {/* Global cursor aura effect */}
+    <CursorAura />
     <div
       id="home"
       className="relative h-screen flex justify-center items-center flex-col overflow-hidden"
@@ -31,9 +34,6 @@ export default function Home() {
           smooth={true}
         />
       </div>
-
-      {/* <CursorAura /> */}
-      {/* Cursor/touch aura */}
 
       {/* Main hero text (simple) */}
       <div className="flex items-center flex-col z-10">
@@ -71,10 +71,8 @@ export default function Home() {
               <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl"></div>
 
             </div>
-          </div>
       </div>
-
-      {/* Cursor/touch aura */}
+      </div>
       {/* <CursorAura /> */}
 
       {/* Timeline text styled like home page */}
@@ -141,16 +139,25 @@ export default function Home() {
 
       {/* Cursor/touch aura */}
 
-      {/* About text in container */}
+      {/* About text in glassmorphic container */}
       <div className="max-w-4xl mx-auto z-10 px-3 text-center">
-        <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="relative rounded-3xl border border-white/25 bg-white/5 bg-clip-padding backdrop-blur-2xl shadow-[0_18px_60px_rgba(0,0,0,0.75)] p-[1px]">
+          <div className="rounded-3xl bg-gradient-to-br from-white/12 via-white/4 to-white/0 p-6 md:p-10 lg:p-12 space-y-6">
             <BlurText
-          text="DevFest is the flagship technical event of Developers' Society featuring a diverse array of events — hackathon, gamejam, workshop, codegolf and guest speaker. This unites over 3000 students from all around the country, converging both in-person at the BITS Pilani - Goa campus and through nationwide virtual participation. Come, be a part of this unique blend of learning and celebration!"
-          delay={20}
-          animateBy="words"
-          direction="top"
-          className="text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed"
+              text="About DevFest"
+              delay={80}
+              animateBy="letters"
+              direction="top"
+              className="text-white font-bold text-3xl md:text-4xl lg:text-5xl"
             />
+            <BlurText
+              text="DevFest is the flagship technical event of Developers' Society featuring a diverse array of events — hackathon, gamejam, workshop, codegolf and guest speaker. This unites over 3000 students from all around the country, converging both in-person at the BITS Pilani - Goa campus and through nationwide virtual participation. Come, be a part of this unique blend of learning and celebration!"
+              delay={160}
+              animateBy="words"
+              direction="top"
+              className="text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -159,8 +166,31 @@ export default function Home() {
       <ComingSoonCard />
     </section>
     <Divider />
-    <section id="faqs">
-      <ComingSoonCard />
+    {/* FAQs section */}
+    <section
+      id="faqs"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 md:px-8 py-16"
+    >
+      {/* Background matching other sections (no green code) */}
+      <div className="absolute inset-0 w-screen h-screen -z-20">
+        <div className="h-full w-full bg-gray-950 overflow-hidden">
+          <div className="relative h-full w-full overflow-hidden bg-gray-900/40 px-8 py-12 backdrop-blur-xl sm:px-12 flex items-center justify-center">
+            {/* Subtle interior glow blobs */}
+            <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-indigo-500/20 blur-3xl"></div>
+            <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQs content in glassmorphic container */}
+      <div className="max-w-6xl w-full mx-auto z-10">
+        <div className="relative rounded-3xl border border-white/25 bg-white/5 bg-clip-padding backdrop-blur-2xl shadow-[0_18px_60px_rgba(0,0,0,0.75)] p-[1px]">
+          {/* subtle inner gradient for glass effect */}
+          <div className="rounded-3xl bg-gradient-to-br from-white/12 via-white/4 to-white/0 p-4 md:p-8 lg:p-10">
+          <FAQs />
+          </div>
+        </div>
+      </div>
     </section>
     </main>
   );
