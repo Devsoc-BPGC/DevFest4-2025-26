@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Orbitron } from "next/font/google";
+import BlurText from "@/components/BlurText";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -16,7 +17,13 @@ const FAQ = ({ question, answer, isOpen, onToggle }) => {
         className="w-full flex justify-between items-center p-3 md:p-4 lg:p-5 text-left hover:bg-white/5 transition-colors duration-200"
       >
         <span className={`text-white font-semibold text-base md:text-lg lg:text-xl ${orbitron.className}`}>
-          {question}
+          <BlurText
+            text={question}
+            delay={40}
+            animateBy="words"
+            direction="top"
+            className="inline-block"
+          />
         </span>
         <span className={`text-white text-xl md:text-2xl transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
           ▼
@@ -72,9 +79,13 @@ const FAQs = () => {
 
   return (
     <div className={`w-full p-2 md:p-4 ${orbitron.className}`}>
-      <h2 className={`text-white font-bold mb-6 md:mb-8 text-4xl md:text-5xl lg:text-6xl ${orbitron.className}`}>
-        FAQs
-      </h2>
+      <BlurText
+        text="FAQs"
+        delay={120}
+        animateBy="letters"
+        direction="top"
+        className={`text-white font-bold mb-6 md:mb-8 text-4xl md:text-5xl lg:text-6xl ${orbitron.className}`}
+      />
       <div className="space-y-3">
         {questions.map((question, i) => (
           <FAQ
