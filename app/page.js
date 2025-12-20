@@ -10,6 +10,9 @@ import Divider from "@/components/Divider";
 import ComingSoonCard from "@/components/ComingSoonCard";
 import BlurText from "@/components/BlurText";
 import FAQs from "@/components/FAQs";
+import Prizes from "@/components/Prizes";
+//import Register from "@/components/Register";
+
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -108,9 +111,10 @@ export default function Home() {
 
     </section>
     <Divider />
-    <section id="prizes">
-      <ComingSoonCard />
-    </section>
+     <div className="relative z-10">
+    
+    <Prizes />
+  </div>
     <Divider />
     <section id="hackathons">
       <ComingSoonCard />
