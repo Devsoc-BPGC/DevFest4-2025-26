@@ -4,7 +4,7 @@ import GradientText from "./GradientText";
 
 export default function Sponsors() {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16">
+    <section className="py-16 px-4 md:px-8 lg:px-16 mt-5">
       <div className="max-w-6xl mx-auto">
         {/* Title Sponsor */}
         <div className="mb-16">
@@ -12,16 +12,16 @@ export default function Sponsors() {
             <BlurText
               text="Title Sponsor"
               delay={200}
-              className="text-3xl md:text-4xl font-bold text-white"
+              className="text-3xl md:text-5xl font-bold text-white"
               animateBy="words"
               direction="top"
             />
           </div>
           <div className="flex justify-center">
             <Image
-              src="/title.png"
+              src="/title2.png"
               alt="Title Sponsor"
-              width={300}
+              width={350}
               height={150}
               className="object-contain"
             />

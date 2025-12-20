@@ -55,7 +55,7 @@ export default function Home() {
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
           animationSpeed={3}
           showBorder={false}
-          className={`text-[8rem] m-0 select-none`}
+          className={`md:text-[8rem] m-0 select-none text-[5rem]`}
         >
           5.0
         </GradientText>
@@ -179,7 +179,7 @@ export default function Home() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 md:px-8 py-16"
     >
       {/* Background matching other sections (no green code) */}
-      <div className="absolute inset-0 w-screen h-screen -z-20">
+      <div className="absolute inset-0 w-screen -z-20">
         <div className="h-full w-full bg-gray-950 overflow-hidden">
           <div className="relative h-full w-full overflow-hidden bg-gray-900/40 px-8 py-12 backdrop-blur-xl sm:px-12 flex items-center justify-center">
             {/* Subtle interior glow blobs */}
@@ -190,7 +190,7 @@ export default function Home() {
       </div>
 
       {/* FAQs content in glassmorphic container */}
-      <div className="max-w-6xl w-full mx-auto z-10">
+      <div className="max-w-6xl w-full mx-auto z-10 py-4">
         <div className="relative rounded-3xl border border-white/25 bg-white/5 bg-clip-padding backdrop-blur-2xl shadow-[0_18px_60px_rgba(0,0,0,0.75)] p-[1px]">
           {/* subtle inner gradient for glass effect */}
           <div className="rounded-3xl bg-gradient-to-br from-white/12 via-white/4 to-white/0 p-4 md:p-8 lg:p-10">

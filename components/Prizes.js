@@ -47,7 +47,7 @@ const PrizeCard = ({ title, prize }) => {
 /* ================= CTA ================= */
 const RegisterCTA = () => {
   return (
-    <div className="w-full flex justify-center mb-24">
+    <div className="w-full flex justify-center mb-20 pt-20" id="prizes">
       <div
         className="
           flex flex-col xl:flex-row-reverse items-center gap-8

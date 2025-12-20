@@ -16,7 +16,7 @@
           delay={100}
           animateBy="letters"
           direction=""
-          className="text-white mt-4 font-bold mb-6 md:mb-8 text-4xl md:text-5xl lg:text-6xl flex items-center justify-center hover:text-cyan-300 transition-colors duration-300 cursor-pointer"
+          className="text-white mt-14 font-bold mb-6 md:mb-10 text-4xl md:text-5xl lg:text-6xl flex items-center justify-center hover:text-cyan-300 transition-colors duration-300 cursor-pointer"
         />
         
         <div className="max-w-4xl mx-auto text-center text-gray-300 text-lg md:text-xl lg:text-2xl mb-10 hover:text-gray-100 transition-colors duration-300 cursor-pointer">
