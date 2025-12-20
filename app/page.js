@@ -9,6 +9,7 @@ import CursorAura from "@/components/CursorAura";
 import Divider from "@/components/Divider";
 import ComingSoonCard from "@/components/ComingSoonCard";
 import BlurText from "@/components/BlurText";
+import Team from "@/components/Team";
 import FAQs from "@/components/FAQs";
 import Sponsors from "@/components/Sponors";
 import Prizes from "@/components/Prizes";
@@ -168,9 +169,9 @@ export default function Home() {
       </div>
     </section>
     <Divider />
-    <section id="team">
-      <ComingSoonCard />
-    </section>
+    {/* the entire section is defined in team.jsx itself */}
+      <Team/>
+
     <Divider />
     {/* FAQs section */}
     <section
