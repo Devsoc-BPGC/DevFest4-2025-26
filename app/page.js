@@ -14,6 +14,7 @@ import Sponsors from "@/components/Sponors";
 import Prizes from "@/components/Prizes";
 //import Register from "@/components/Register";
 
+import Hackathon from "@/components/hackathon";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -117,8 +118,8 @@ export default function Home() {
     <Prizes />
   </div>
     <Divider />
-    <section id="hackathons">
-      <ComingSoonCard />
+    <section id="hackathons" className="relative  flex items-center justify-center overflow-hidden">
+      <Hackathon />
     </section>
     <Divider />
     <section id="sponsors">
