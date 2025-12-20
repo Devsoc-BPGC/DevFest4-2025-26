@@ -29,13 +29,19 @@ const FAQ = ({ question, answer, isOpen, onToggle }) => {
           ▼
         </span>
       </button>
-      {isOpen && (
+      <div
+        className={`
+    overflow-hidden transition-all
+    ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
+  `}
+      >
         <div className="px-3 md:px-4 lg:px-5 pb-3 md:pb-4 lg:pb-5 pt-2">
           <p className={`text-white/90 text-sm md:text-base lg:text-lg leading-relaxed ${orbitron.className}`}>
             {answer}
           </p>
         </div>
-      )}
+      </div>
+
     </div>
   );
 };
@@ -53,7 +59,7 @@ const FAQs = () => {
 
   const questions = [
     "1. What is DevFest?",
-    "2. When and where is DevFest 4.0 happening?",
+    "2. When and where is DevFest 5.0 happening?",
     "3. Who can participate in DevFest?",
     "4. Is there a registration fee for DevFest events?",
     "5. How can I register for specific events at DevFest?",
@@ -66,7 +72,7 @@ const FAQs = () => {
 
   const answers = [
     "   - DevFest is an annual technical festival organized by Developers' Society, BITS Goa, featuring a series of events, including hackathons, gamejam, workshop, and expert speaker session, aimed at fostering a vibrant coding culture.",
-    "   - DevFest 4.0 is scheduled from January 17th to January 19th, 2025. The event will take place in a hybrid mode, with in-person activities at BITS Pilani - Goa, and nationwide virtual participation.",
+    "   - DevFest 5.0 is scheduled from January 14th 2026. The event will take place in a hybrid mode, with in-person activities at BITS Pilani - Goa, and nationwide virtual participation.",
     "   - DevFest is open to everyone across the globe. Whether you're a seasoned developer or a beginner, there's something for everyone.",
     "   - No, all events at DevFest are entirely free.",
     "   - Event-specific registration details is available on the DevFest website. Simply visit the website, navigate to the event of your interest, and follow the registration instructions.",

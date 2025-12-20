@@ -38,7 +38,7 @@ const NavBar = () => {
         fixed top-0 z-50
         flex w-screen
         justify-between items-center
-        px-8 py-4
+        px-8 py-3
         backdrop-blur-md
         bg-white/10
         border-b border-white/20
