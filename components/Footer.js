@@ -1,37 +1,98 @@
-"use client"
-import Image from "next/image"
-import { Audiowide } from "next/font/google";
-
-const audioWide = Audiowide({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Mail,
+  MapPin,
+  Youtube,
+} from "lucide-react";
 
 const Footer = () => {
-  return (
-    <footer className={`
-      fixed bottom-0 z-50
-      flex w-screen
-      justify-center items-center
-      px-8 py-4
-      backdrop-blur-md
-      bg-white/10
-      border-t border-white/20
-      shadow-lg shadow-black/20
-      ${audioWide.className}
-    `}>
-      <div className="flex items-center gap-8">
-        <div className="flex items-center gap-3">
+  const socialLinks = [
+    { icon: Github, href: "https://github.com/Devsoc-BPGC", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://in.linkedin.com/company/devsoc-bpgc",
+      label: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/devsocbitsgoa/?hl=en",
+      label: "Instagram",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/channel/UCOYKNjQaifpxy5qG3as82ZA",
+      label: "YouTube",
+    },
+  ];
 
-        <Image src="/devsoc_logo.svg" width={40} height={25} alt="logo"/>
-        <Image src="/devsoc.svg" width={140} height={100} alt="devsoc"/>
+
+
+  return (
+    <footer
+      id="contact"
+      className="bg-black dark:bg-black text-white py-8 px-6"
+    >
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand Section */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-6">
+              <img src={"/DevSocLogo.png"} alt="DevSoc Logo" className="w-10 h-8" />
+
+              <img
+                src={"/DevTextWhite.png"}
+                alt="DevSoc Logo Light"
+                className="w-auto h-8"
+              />
+            </div>
+            <p className="text-gray-400 text-lg leading-relaxed mb-6 max-w-md">
+              Empowering the next generation of developers through innovation,
+              collaboration, and cutting-edge technology solutions.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center text-gray-400 hover:text-teal-600 hover:bg-gray-700 dark:hover:bg-gray-800 transition-colors duration-200"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          
+          <div>
+            
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold">Contact</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3 text-gray-400">
+                <Mail className="w-5 h-5 text-teal-600" />
+                <span>devsocbpgc@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400">
+                <MapPin className="w-5 h-5 text-teal-600" />
+                <span>Bits Pilani - Goa Campus</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <span className="text-white/80 text-sm font-medium">
-          made with love by DEVSOC
-        </span>
+        <div className="  border-t border-gray-800 dark:border-gray-900 text-center">
+          <p className="text-gray-400">
+            Made with <span className="text-red-500">♥</span> by DevSoc
+          </p>
+        </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

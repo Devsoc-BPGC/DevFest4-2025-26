@@ -90,7 +90,7 @@ export default function Home() {
           hoverIntensity={0.2}
           className={`text-[9rem] font-bold`}
         >
-          14 Jan
+          16th to 18th Jan
         </FuzzyText>
 
         <GradientText
@@ -102,13 +102,6 @@ export default function Home() {
           2026
         </GradientText>
           </div>
-        <BlurText
-          text="MORE DETAILS COMING SOON..."
-          delay={150}
-          animateBy="words"
-          direction="top"
-          className="text-white text-2xl font-bold"
-            />
       </div>
 
 
@@ -116,7 +109,7 @@ export default function Home() {
     <Divider />
      <div className="relative z-10">
     
-    <Prizes />
+    {/* <Prizes /> */}
   </div>
     <Divider />
     <section id="hackathons" className="relative  flex items-center justify-center overflow-hidden">
