@@ -25,7 +25,6 @@ const NavBar = () => {
   const navItems = [
     { label: "HOME", href: "#home" },
     { label: "TIMELINE", href: "#timeline" },
-    { label: "PRIZES", href: "#prizes" },
     { label: "HACKATHONS", href: "#hackathons" },
     { label: "SPONSORS", href: "#sponsors" },
     { label: "ABOUT", href: "#about" },
