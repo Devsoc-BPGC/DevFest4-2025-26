@@ -74,7 +74,7 @@ export default function Home () {
         </div>
         <div
           className='apply-button w-full flex justify-center'
-          data-hackathon-slug='YOUR-HACKATHON-SLUG'
+          data-hackathon-slug='devfest5goa'
           data-button-theme='light'
           style={{ height: '44px', width: '312px' }}
         ></div>
