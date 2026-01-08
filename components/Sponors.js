@@ -2,9 +2,9 @@ import Image from "next/image";
 import BlurText from "./BlurText";
 
 const sponsors = [
-  { src: "/gold1.png", alt: "Gold Sponsor 1" },
+  { src: "/gold1.png", alt: "DEVFOLIO LOGO" },
   { src: "/aws.svg", alt: "AWS" },
-  { src: "/ethindia.png", alt: "ETHIndia" },
+  { src: "/ethindia.png", alt: "ETHINDIA LOGO" },
   { src: "/blinkit.jpeg", alt: "Blinkit" },
   { src: "/igd.jpeg", alt: "IGDC" },
   { src: "/nexon.jpeg", alt: "Nexon" },
