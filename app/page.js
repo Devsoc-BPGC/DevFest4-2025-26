@@ -13,6 +13,7 @@ import Team from '@/components/Team'
 import FAQs from '@/components/FAQs'
 import Sponsors from '@/components/Sponors'
 import Prizes from '@/components/Prizes'
+import { useEffect } from 'react'
 //import Register from "@/components/Register";
 
 import Hackathon from '@/components/hackathon'
@@ -23,6 +24,16 @@ const orbitron = Orbitron({
 })
 
 export default function Home () {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://apply.devfolio.co/v2/sdk.js'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
   return (
     <main className={`${orbitron.className}`}>
       {/* Global cursor aura effect */}
@@ -42,7 +53,8 @@ export default function Home () {
         </div>
 
         {/* Main hero text (simple) */}
-        <div className='flex items-center flex-col z-10'>
+        <div className='flex flex-col items-center gap-8 z-10'>
+        <div className='flex items-center flex-col z-10 '>
           <div
             className='cursor-pointer transition-all duration-200
                      hover:scale-110 hover:-translate-y-1
@@ -60,6 +72,13 @@ export default function Home () {
             5.0
           </GradientText>
         </div>
+        <div
+          className='apply-button w-full flex justify-center'
+          data-hackathon-slug='YOUR-HACKATHON-SLUG'
+          data-button-theme='light'
+          style={{ height: '44px', width: '312px' }}
+        ></div>
+      </div>
       </div>
 
       <Divider />
