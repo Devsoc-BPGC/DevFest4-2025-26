@@ -7,7 +7,7 @@ const sponsors = [
   { src: "/ethindia.png", alt: "ETHINDIA LOGO" },
   { src: "/blinkit.jpeg", alt: "Blinkit" },
   { src: "/igd.jpeg", alt: "IGDC" },
-  { src: "/nexon.jpeg", alt: "Nexon" },
+  // { src: "/nexon.jpeg", alt: "Nexon" },
 ];
 
 export default function Sponsors() {
